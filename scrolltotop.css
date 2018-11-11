@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------------------
+          Styles for the scroll to top button
+ --------------------------------------------------------------------------*/
+@keyframes scroll-top-bounce {
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+    80% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+}
+
+.scroll-top .scroll-top-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #fff;
+    -webkit-border-top-left-radius: 8px;
+    -moz-border-top-left-radius: 8px;
+    border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-top-right-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-top .scroll-top-button .scroll-top-text {
+        display: none;
+    }
+
+    .scroll-top .scroll-top-button .scroll-top-arrow {
+        left: 48%;
+        right: auto;
+        -webkit-animation: scroll-top-bounce 2s infinite;
+        -moz-animation: scroll-top-bounce 2s infinite;
+        -o-animation: scroll-top-bounce 2s infinite;
+        animation: scroll-top-bounce 2s infinite;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .scroll-top .scroll-top-button {
+        width: 48px;
+        height: 48px;
+        padding: 2px 16px;
+        right: auto;
+        left: 48%;
+        color: #000;
+    }
+
+    .scroll-top .scroll-top-button .scroll-top-arrow {
+        padding-top: 8px;
+    }
+
+    .scroll-top .scroll-top-button .scroll-top-text {
+        opacity: 0;
+    }
+
+    .scroll-top .scroll-top-button:hover {
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        -ms-transition: .5s;
+        transition: .5s;
+        width: 150px;
+        width: 150px;
+        left: 45%;
+    }
+
+    .scroll-top .scroll-top-button:hover .scroll-top-text {
+        opacity: 1;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    .scroll-top .scroll-top-button:hover .scroll-top-arrow {
+        -webkit-animation: scroll-top-bounce 1s;
+        -moz-animation: scroll-top-bounce 1s;
+        -o-animation: scroll-top-bounce 1s;
+        animation: scroll-top-bounce 1s;
+    }
+}
